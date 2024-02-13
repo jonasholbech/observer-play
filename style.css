@@ -1,0 +1,53 @@
+:root {
+  --box-size: 150px;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, var(--box-size));
+  grid-auto-rows: var(--box-size);
+  margin: auto;
+  grid-auto-flow: dense;
+  justify-content: center;
+  padding: 1rem;
+  > * {
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    place-content: center center;
+    align-items: center;
+    font-size: 4rem;
+    color: #3a3939;
+    grid-column: var(--columns, span 1);
+    grid-row: var(--rows, span 1);
+    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.7);
+    transition: all 0.2s;
+    &:hover {
+      transform: translate(2px, 2px);
+    }
+  }
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  button {
+    padding: 0.5rem;
+    background: black;
+    color: white;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #808080;
+      border-color: white;
+    }
+  }
+}
